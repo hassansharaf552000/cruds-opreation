@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="mb-3">
+        <label for="productNameInp" class="form-label">product Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="productNameInp"
+          placeholder="enter product name"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="productpriceInp" class="form-label">product price</label>
+        <input
+          type="number"
+          class="form-control"
+          id="productpriceInp"
+          placeholder="enter price "
+        />
+      </div>
+      <div class="mb-3">
+        <label for="productcatgeroyInp" class="form-label"
+          >product category</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="productcatgeroyInp"
+          placeholder="enter category name"
+        />
+      </div>
+
+      <div>
+        <label for="productdescInp" class="form-label"
+          >product description</label
+        >
+
+        <textarea
+          name=""
+          class="form-control form-label"
+          id="productdescInp"
+          placeholder="enter description "
+        ></textarea>
+      </div>
+      <div class="container rounded-3 p-4 vstack gap-4">
+        <button onclick="addProduct()" class="btn btn-primary" id="addProductButton">Add product</button>
+        <button onclick="update()" class="btn btn-warning mt-4 d-none" id="btnUpdate">Update product</button>
+        <button onclick="clearForm()" class="btn btn-secondary">Reset </button>    
+      </div>
+      <br>
+      <div class="mb-3 ">
+        <input
+        oninput="search(this.value)"
+          type="text"
+          class="form-control"
+          id="search"
+          placeholder="search by Name"
+        />
+      </div>
+    
+    </div>
+    <div class="container">
+      <div class=" mb-3">
+        <div class="mb-3">
+          <table class="table table-striped mt-4 text-center">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="t-body">
+                <!-- Rows will be added here dynamically -->
+            </tbody>
+        </table>
+        </div>
+        
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+  <script src="bootstrap.bundle.min.js"></script>
+</html>
